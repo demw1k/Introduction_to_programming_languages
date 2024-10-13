@@ -9,7 +9,7 @@ if (num2 == 0)
 {
     Console.WriteLine("На ноль нельзя делить!");
 }
-else if ( num1 % num2 == 0)
+else if (num1 % num2 == 0)
 {
     Console.WriteLine("Число делится");
 }
