@@ -4,8 +4,6 @@
 // трёхзначное число и возводит вторую цифру этого
 // числа в степень, равную третьей цифре.
 
-using System.Reflection;
-
 Console.WriteLine("Введите целое положительное ТРЁХЗНАЧНОЕ число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
