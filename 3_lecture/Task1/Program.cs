@@ -1,4 +1,4 @@
-﻿
+﻿//Вычислите значение формулы (a*b)/(c*d), где a,b,c,d - некторые целые числа.
 
 
 double CalculateFormula(int a, int b, int c, int d)
