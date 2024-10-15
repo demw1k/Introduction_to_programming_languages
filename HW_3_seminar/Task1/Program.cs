@@ -6,7 +6,7 @@
 
 
 
-int[] arr = new int[10] { 20, 39, 27, 99, 56, 78, 4, 9, 11, 40 };
+int[] arr = new int[10] {20, 39, 27, 89, 56, 78, 4, 9, 11, 21};
 
 int count = 0;
 
@@ -14,7 +14,7 @@ int countNumber = 0;
 
 while (count < arr.Length)
 {
-    if ((arr[count] >= 10) && (arr[count] <= 90))
+    if ((arr[count] >= 20) && (arr[count] <= 90))
     {
         countNumber++;
     }
