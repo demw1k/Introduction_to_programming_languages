@@ -57,11 +57,11 @@ void PrintArray(double[] array)
     {
         if (i < array.Length - 1)
         {
-            Console.Write($"{array[i]}, ");
+            Console.Write($"{array[i]:F2}, "); // :F2 это округление до 2ух знаков
         }
         else
         {
-            Console.Write($"{array[i]}");
+            Console.Write($"{array[i]:F2}"); // :F2 это округление до 2ух знаков
         }
     }
     Console.Write("]");
