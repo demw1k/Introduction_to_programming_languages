@@ -52,6 +52,7 @@ int GetMinSumOfElements(int[,] matrix)
                 sumMin = sum;
             }
         }
+        i++;
 
 
 
