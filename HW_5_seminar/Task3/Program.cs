@@ -30,39 +30,41 @@ void PrintMatrix(int[,] matrix)
 
 }
 
-int GetMinSumOfElements(int[,] matrix)
+void GetMinSumOfElements(int[,] matrix)
 {
-    int sum = 0;
+
     int sumMin = 0;
 
-    for (int a = 0; a < matrix.GetLength(1); a++)
+    for (int a = 0; a < 1; a++)
     {
-        sumMin = sumMin + matrix[0, a];
+        for (int b = 0; b < matrix.GetLength(1); b++)
+        {
+            sumMin += matrix[a, b];
+        }
     }
 
-    int i = 0;
-    while (i < matrix.GetLength(0))
+
+
+    int sum = 0;
+    int indexOfMin = 0;
+
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            sum = sum + matrix[i, j];
-
-            if (sumMin > sum)
-            {
-                sumMin = sum;
-            }
+            sum += matrix[i, j];
         }
-        i++;
-
-
-
+        if (sum < sumMin)
+        {
+            sumMin = sum;
+            indexOfMin = i;
+        }
     }
-    return sumMin;
+    Console.WriteLine($"Номер строки с наименьшей суммой элементов - № {indexOfMin + 0}");
 }
 
-int[,] array2d = CreateMatrixRndInt(3, 4, 1, 10);
+int[,] array2d = CreateMatrixRndInt(3, 3, 1, 6);
 PrintMatrix(array2d);
 Console.WriteLine();
 
-int result = GetMinSumOfElements(array2d);
-Console.WriteLine(result);
+GetMinSumOfElements(array2d);
