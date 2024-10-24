@@ -59,6 +59,7 @@ void GetMinSumOfElements(int[,] matrix)
             sumMin = sum;
             indexOfMin = i;
         }
+        sum = 0;
     }
     Console.WriteLine($"Номер строки с наименьшей суммой элементов - № {indexOfMin + 0}");
 }

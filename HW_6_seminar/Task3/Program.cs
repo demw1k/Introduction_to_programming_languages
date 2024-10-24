@@ -1,25 +1,33 @@
-﻿
+﻿// Задача 3: Задайте произвольную строку. Выясните, является ли она палиндромом.
 
-void IsPalindrome(string polindrom)
+
+
+bool IsPalindrome(string s)
 {
-    for (int i = 0; i < polindrom.Length / 2; i++)
+    bool result = false;
+    for (int i = 0; i < s.Length / 2; i++)
     {
-        if (polindrom[i] == polindrom[polindrom.Length - 1 - i])
+        if (s[i] == s[s.Length - 1 - i])
         {
-            Console.WriteLine("Является полиндромом");
+            result = true;
         }
         else
         {
-            Console.WriteLine("Не является полиндромом");
+            result = false;
             break;
         }
-        Console.WriteLine("Является полиндромом");
     }
+    return result;
 }
 
-
-
-Console.WriteLine("Введите строку, для проверки на полиндром: ");
-string polindrom = Console.ReadLine();
-bool isPalindrome = IsPalindrome(polindrom);
-Console.WriteLine(isPalindrome ? "Да" : "Нет");
+Console.InputEncoding = System.Text.Encoding.GetEncoding("utf-16");// строка, чтобы распознавало кириллицу
+Console.WriteLine("Введите строку: ");
+string input = Convert.ToString(Console.ReadLine());
+if (IsPalindrome(input))
+{
+    Console.WriteLine("Введенная строка - палиндром");
+}
+else
+{
+    Console.WriteLine("Введенная строка - не палиндром");
+}
