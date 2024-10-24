@@ -7,16 +7,30 @@
 
 
 
-void PrintNaturalNumbers(int N, int M)
+void PrintNaturalNumbers(int m, int n)
 {
-    if (N == M - 1) return;
-    PrintNaturalNumbers(N - 1, M);
-    Console.Write($"{N} ");
+    if (m < n)
+    {
+        Console.Write($"{m} ");
+        if (m == n)
+        {
+            return;
+        }
+        PrintNaturalNumbers(m + 1, n);
+    }
+    else
+    {
+        Console.Write($"{n} ");
+        if (n == m)
+        {
+            return;
+        }
+        PrintNaturalNumbers(n + 1, m);
+    }
 }
 
-Console.WriteLine(" Введите натуральное число N: ");
-int number = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine(" Введите натуральное число M: ");
-int number1 = Convert.ToInt32(Console.ReadLine());
-
-PrintNaturalNumbers(number, number1);
+Console.Write("Введите натуральное число M: ");
+int first_num = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите натуральное число N: ");
+int second_num = Convert.ToInt32(Console.ReadLine());
+PrintNaturalNumbers(first_num, second_num);
